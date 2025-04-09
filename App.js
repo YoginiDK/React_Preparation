@@ -1,19 +1,16 @@
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello world from Yogini"
-// );
+import React from "react";
+import ReactDOM from "react-dom/client";
+import HeaderComponent from "./Components/Header";
+import BodyComponent from "./Components/Body";
 
-const heading = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-]);
-console.log(heading);
+const App = () => {
+  return (
+    <>
+      <HeaderComponent />
+      <BodyComponent />
+    </>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<App />);
